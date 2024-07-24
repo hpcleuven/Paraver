@@ -1,8 +1,7 @@
 # Paraver
 ## Paraver
 
-[Paraver](https://tools.bsc.es/paraver) is an application performance analyzer based on event traces with the flexibility to explore the collected data.
-It can be used to qualitatively analyse the application behavior by visual inspection in order to better understand and then to focus on the detailed quantitative analysis of the problems.
+[Paraver](https://tools.bsc.es/paraver) is a highly configurable application performance analyzer based on data from event traces. It is used to explore the collected data and to qualitatively analyse the application behavior by visual inspection in order to better understand an applicaiton's behavior. That could then help to focus on a more detailed quantitative analysis of the problems.
 
 ## Extrae
 
