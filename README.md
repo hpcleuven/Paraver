@@ -1,4 +1,7 @@
 # Paraver
+
+Having the ability to visually inspect an application's behaviour could help users to better understand and furhter explore any underlying performance issues. That is especially useful for highly parallel codes employing MPI, OpenMP, CUDA, etc... In this section we present a short introduction to two open source tools used in application analysis.
+
 ## Paraver
 
 [Paraver](https://tools.bsc.es/paraver) is a highly configurable application performance analyzer based on data from event traces. It is used to explore the collected data and to qualitatively analyse the application behavior by visual inspection in order to better understand an applicaiton's behavior. That could then help to focus on a more detailed quantitative analysis of the problems.
