@@ -4,12 +4,9 @@
 [Paraver](https://tools.bsc.es/paraver) is a performance analyzer based on event traces with the flexibility to explore the collected data.
 It can be used to qualitatively analyse the application behavior by visual inspection in order to better understand and then to focus on the detailed quantitative analysis of the problems.
 
-https://tools.bsc.es/paraver
-
-
 ## Extrae
 
-https://tools.bsc.es/extrae
+[Extrae](https://tools.bsc.es/extrae) is a package devoted to generate Paraver trace files for a subsequent application performance analysis.
 
 
 Use Extrae to create a trace of a parallel program run within a batch job.
