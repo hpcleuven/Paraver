@@ -4,11 +4,13 @@ Having the ability to visually inspect an application's behaviour could help use
 
 ## Paraver
 
-[Paraver](https://tools.bsc.es/paraver) is a highly configurable application performance analyzer based on data from event traces. It is used to explore the collected data and to qualitatively analyse the application behavior by visual inspection in order to better understand an applicaiton's behavior. That could then help to focus on a more detailed quantitative analysis of the problems.
+[Paraver](https://tools.bsc.es/paraver) is a highly configurable application performance analyzer based on data from event traces. It is used to explore the collected data and to qualitatively analyse the application behavior by visual inspection in order to better understand an applicaiton's behavior. That could then help to focus on a more detailed quantitative analysis of the problems. Paraver itself does not create run traces. It is only used for trace analysis.
 
 ## Extrae
 
-[Extrae](https://tools.bsc.es/extrae) is a package devoted to generate Paraver trace files for a subsequent application performance analysis.
+[Extrae](https://tools.bsc.es/extrae) is an instrumentation package devoted to generate Paraver trace files for a subsequent application performance analysis. Extrae is highly configurable
+
+compiled and run with the shared memory model (like OpenMP and pthreads), the message passing (MPI) programming model 
 
 
 Use Extrae to create a trace of a parallel program run within a batch job.
