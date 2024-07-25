@@ -8,19 +8,27 @@ Having the ability to visually inspect an application's behaviour could help use
 
 ## Extrae
 
-[Extrae](https://tools.bsc.es/extrae) is an instrumentation package devoted to generate Paraver trace files for a subsequent application performance analysis. Extrae is highly configurable
+[Extrae](https://tools.bsc.es/extrae) is an instrumentation package devoted to generate Paraver trace files for a subsequent application performance analysis. Extrae is highly configurable and can trace applications compiled and run with the shared memory model (like OpenMP and pthreads), message passing interface (MPI), or both. The configuration of what to trace is passed via an XML file with all the necessary directives in it. A limited number of the configuration calls can also be set as environment variables if the computer system does not support XML libraries. The user is very much encouraged to refer to the latest [Extrae Documentation](https://tools.bsc.es/doc/html/extrae/index.html).
 
-compiled and run with the shared memory model (like OpenMP and pthreads), the message passing (MPI) programming model 
+## Trace and profile
+
+In order to create a trace of a running compiled binary one must first properly configure the Extrae environment:
+
+```
+export EXTRAE_HOME=/PATH/TO/EXTRAE_INStALLATION
+export EXTRAE_CONFIG_FILE=/PATH/TO/extrae_config.xml
+export LD_PRELOAD=${EXTRAE_HOME}/lib/libmpitrace.so
+```
+
+In the above example we first point to the Extrae installation directory, then we point to the 
 
 
-Use Extrae to create a trace of a parallel program run within a batch job.
+Extrae can create a trace of a parallel program run within a batch job.
 This script to be called right after "mpirun -np NPROCS" in the job submit script.
 Example: mpirun -np $SLURM_NPROCS ./slurm-trace-extrae.sh <executable> [parameters]
 To use with "srun" instead within a job script OMPI must be built with SLURM's PMI support.
 
-https://tools.bsc.es/doc/html/extrae/index.html
-https://tools.bsc.es/sites/default/files/documentation/2A_Instrumentation.pdf
-https://www.vi-hps.org/cms/upload/material/tw42/Extrae-Paraver-Hands-On.pdf
+
 
 ```
 #!/bin/bash
@@ -49,3 +57,7 @@ text *formatting*
 more ```text formatting_```
 
 
+## References
+https://tools.bsc.es/doc/html/extrae/index.html
+https://tools.bsc.es/sites/default/files/documentation/2A_Instrumentation.pdf
+https://www.vi-hps.org/cms/upload/material/tw42/Extrae-Paraver-Hands-On.pdf
