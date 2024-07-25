@@ -106,7 +106,7 @@ Note the extra ```$*``` operand at the end of the bash script. That will pass th
 mpirun -np $SLURM_NPROCS ./slurm-trace-extrae.sh <executable> [<parameters>]
 ```
 
-NOTE: To use with "srun" instead within a job script OMPI must be built with SLURM's PMI support.
+NOTE: To use with ```srun``` instead within a job script OMPI must be built with SLURM's PMI support.
 
 And here is an example of a Slurm job submission script:
 
