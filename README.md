@@ -137,7 +137,7 @@ EXTRAE_CONF_SCRIPT="slurm-trace-extrae.sh"
 mpirun -np $SLURM_NPROCS ./${EXTRAE_CONF_SCRIPT} <executable> [<parameters>]
 ```
 
-Once a trace has been created it can be loaded in Paraver. For small trace files in the order of several gigabytes one could use Paraver over NX to inspect the application directly from the VSC cluster. For larger traces, however, it would be more practical if users install Paraver on their local machines, transfer the trace, and profile it locally.
+Once a trace has been created it can be loaded in Paraver. For small trace files in the order of no more than a few gigabytes one could use Paraver over NX to inspect the application directly from the VSC cluster. For larger traces, however, it would be more practical if users install Paraver on their local machines, transfer the trace, and profile it locally.
 
 To use Paraver within NX, open an NX session, start a terminal, load the Paraver module, and finally start the GUI. For example:
 
