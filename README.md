@@ -154,9 +154,11 @@ wxparaver
 Once the Paraver GUI opens users can load the trace file from the *File/Load Trace* menu. As a first step one could then try any of the options under *Hints* menu to inspect the loaded trace.
 
 ## References
+https://tools.bsc.es/paraver-tutorials
+
 https://tools.bsc.es/doc/html/extrae/index.html
 
-https://github.com/icl-utk-edu/papi/wiki/
+https://github.com/icl-utk-edu/papi/wiki
 
 https://tools.bsc.es/sites/default/files/documentation/2A_Instrumentation.pdf
 
