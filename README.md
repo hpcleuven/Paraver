@@ -80,7 +80,7 @@ export LD_PRELOAD=${EXTRAE_HOME}/lib/libmpitrace.so
 export TRACE_NAME=my_trace.prv
 ```
 
-In the above example we first point to the Extrae installation directory, then we point to the XML configuration file containing the tracing instructions of choice, and finally via ```LD_PRELOAD``` we point to the proper tracing library, e.g., for an applicaiton compiled with MPI one should use ```libmpitrace```. Extrae uses separate libraries for C/C++ codes and for FORTRAN code. E.g., ```libmpitrace``` is for C/C++ and for a FORTRAN code one would use ```libmpitracef``` (attach the suffix “f”). The last *export ...* above specifies the name of the trace file which will be created.
+In the above example we first point to the Extrae installation directory, then we point to the XML configuration file containing the tracing instructions of choice, and finally via ```LD_PRELOAD``` we point to the proper tracing library, e.g., for an applicaiton compiled with MPI one should use ```libmpitrace```. Extrae uses separate libraries for C/C++ codes and for FORTRAN code. E.g., ```libmpitrace``` is for C/C++ and for a FORTRAN code one would use ```libmpitracef``` (attach the suffix “f”). The last ```export ...``` above specifies the name of the trace file which will be created.
 
 After the environment has been prepared the application can be traced like so:
 
@@ -100,7 +100,7 @@ export TRACE_NAME=my_trace.prv
 $*
 ```
 
-Note the extra ```$*``` operand at the end of the bash script. That will pass the program binary to Extrae for tracing. Then that script is to be called right after the *mpirun -np NPROCS* directive in the job submit script, e.g.:
+Note the extra ```$*``` operand at the end of the bash script. That will pass the program binary to Extrae for tracing. Then that script is to be called right after the ```mpirun -np NPROCS``` directive in the job submit script, e.g.:
 
 ```
 mpirun -np $SLURM_NPROCS ./slurm-trace-extrae.sh <executable> [<parameters>]
@@ -109,8 +109,6 @@ mpirun -np $SLURM_NPROCS ./slurm-trace-extrae.sh <executable> [<parameters>]
 NOTE: To use with "srun" instead within a job script OMPI must be built with SLURM's PMI support.
 
 And here is an example of a Slurm job submission script:
-
-
 
 ```
 #!/bin/bash -l
