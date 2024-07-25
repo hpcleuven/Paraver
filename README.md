@@ -151,7 +151,7 @@ Then start the Paraver gui with:
 wxparaver
 ```
 
-Once the Paraver GUI opens users can load the trace file from the *File/Load Trace* menu.
+Once the Paraver GUI opens users can load the trace file from the *File/Load Trace* menu. As a first step one could then try any of the options under *Hints* menu to inspect the loaded trace.
 
 ## References
 https://tools.bsc.es/doc/html/extrae/index.html
