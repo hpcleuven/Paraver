@@ -139,6 +139,9 @@ mpirun -np $SLURM_NPROCS ./${EXTRAE_CONF_SCRIPT} <executable> [<parameters>]
 
 ## References
 https://tools.bsc.es/doc/html/extrae/index.html
+
 https://github.com/icl-utk-edu/papi/wiki/
+
 https://tools.bsc.es/sites/default/files/documentation/2A_Instrumentation.pdf
+
 https://www.vi-hps.org/cms/upload/material/tw42/Extrae-Paraver-Hands-On.pdf
