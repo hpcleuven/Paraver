@@ -1,6 +1,6 @@
 # Paraver
 
-Having the ability to visually inspect an application's behaviour could help users to better understand and furhter explore any underlying performance issues. That is especially useful for highly parallel codes employing MPI, OpenMP, CUDA, etc... In this section we present a short introduction to two open source tools used in application analysis.
+Having the ability to visually inspect an application's behaviour could help users to better understand and furhter explore any underlying performance issues. That is especially useful for highly parallel codes employing MPI, OpenMP, CUDA, etc... In this section we present a short introduction to two open source tools used in HPC application analysis.
 
 ## Paraver
 
