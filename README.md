@@ -25,15 +25,18 @@ In the above example we first point to the Extrae installation directory, then w
 After the environment has been prepared the application can be traced like so:
 
 ```
-${EXTRAE_HOME}/bin/extrae -config ${EXTRAE_CONFIG_FILE} <program> [<program-parameters>]
+${EXTRAE_HOME}/bin/extrae -config ${EXTRAE_CONFIG_FILE} <executable> [<parameters>]
 ```
 
-All that can be bundled 
+Extrae can also create a trace of a parallel program run within a batch job. For that purpose the above environment configuration is first stored in a bash shell script, e.g., called *slurm-trace-extrae.sh*. Then that script is to be called right after *mpirun -np NPROCS* directive in the job submit script, e.g.:
 
-Extrae can create a trace of a parallel program run within a batch job.
-This script to be called right after "mpirun -np NPROCS" in the job submit script.
-Example: mpirun -np $SLURM_NPROCS ./slurm-trace-extrae.sh <executable> [parameters]
-To use with "srun" instead within a job script OMPI must be built with SLURM's PMI support.
+```
+mpirun -np $SLURM_NPROCS ./slurm-trace-extrae.sh <executable> [<parameters>]
+```
+
+NOTE: To use with "srun" instead within a job script OMPI must be built with SLURM's PMI support.
+
+
 
 
 
