@@ -20,8 +20,15 @@ export EXTRAE_CONFIG_FILE=/PATH/TO/extrae_config.xml
 export LD_PRELOAD=${EXTRAE_HOME}/lib/libmpitrace.so
 ```
 
-In the above example we first point to the Extrae installation directory, then we point to the 
+In the above example we first point to the Extrae installation directory, then we point to the XML configuration file containing the tracing instructions of choice, and finally via ```LD_PRELOAD``` we point to the proper tracing library, e.g., for an applicaiton compiled with MPI one should use ```libmpitrace```. Extrae uses separate libraries for C/C++ codes and for FORTRAN code. E.g., ```libmpitrace``` is for C/C++ and for a FORTRAN code one would use ```libmpitracef``` (attach the suffix “f”).
 
+After the environment has been prepared the application can be traced like so:
+
+```
+${EXTRAE_HOME}/bin/extrae -config ${EXTRAE_CONFIG_FILE} <program> [<program-parameters>]
+```
+
+All that can be bundled 
 
 Extrae can create a trace of a parallel program run within a batch job.
 This script to be called right after "mpirun -np NPROCS" in the job submit script.
